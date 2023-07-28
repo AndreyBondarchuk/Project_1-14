@@ -800,3 +800,37 @@ function safeFormatDate(date, formatType) {
   }
 }
 In the above code, if an error occurs while formatting the date, the error will be logged to the console and the original date string will be returned as a fallback.
+
+export function getLocaleFromUrl() {
+  const pathSegments = window.location.pathname.split('/');
+  const locale = pathSegments[1]; // The locale will be the first segment of the URL path
+  return locale;
+} 
+not working if we have something else at url 
+
+ChatGPT
+You are correct; the provided getLocaleFromUrl function assumes that the locale is always the first segment of the URL path. If there are additional segments or if the locale is at a different position in the URL, the function won't work as expected.
+
+To make the getLocaleFromUrl function more flexible and adaptable to various URL structures, you can modify it to search for the locale segment in the URL path.
+
+Here's an updated version of the getLocaleFromUrl function to handle different URL structures:
+
+jsx
+Copy code
+export function getLocaleFromUrl() {
+  const pathSegments = window.location.pathname.split('/');
+  let locale = 'en'; // Default locale, set to 'en' or any fallback language code
+
+  // Search for the locale segment in the URL path
+  for (const segment of pathSegments) {
+    if (segment.length === 2) { // Assuming the locale code is always two characters (e.g., 'en', 'fr', etc.)
+      locale = segment;
+      break;
+    }
+  }
+
+  return locale;
+}
+In this updated version, the function iterates through each segment of the URL path and checks if the segment's length is two characters (assuming that the locale code is always two characters). If it finds such a segment, it considers it as the locale and returns it. If no valid locale segment is found, the function returns the default locale ('en' in this example).
+
+This modification should make the getLocaleFromUrl function more flexible and handle different URL structures. However, keep in mind that the function still relies on certain assumptions about the URL format, and it may need further adjustments depending on your specific use case.

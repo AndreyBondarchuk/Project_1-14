@@ -18,6 +18,7 @@ function App() {
   const handleLocaleChange = (e) => {
     const selectedLanguage = e.target.value;
     i18n.changeLanguage(selectedLanguage);
+    window.location.hash = selectedLanguage;
   };
 
   const handleDateChange = (e) => {

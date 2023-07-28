@@ -1,14 +1,10 @@
 export function getLocaleFromUrl() {
-  const pathSegments = window.location.pathname.split('/');
-  let locale = 'en';
-  let locales = ['en', 'ua', 'fr'];
-  for (const segment of pathSegments) {
-    for (const localeIndex of locales) {
-      if (segment === localeIndex) {
-        return segment;
-      }
-    }
+  const hash = window.location.hash.slice(1); 
+  const locales = ['en', 'ua', 'fr'];
+  
+  if (locales.includes(hash)) {
+    return hash;
   }
 
-  return locale;
+  return 'en';
 }

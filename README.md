@@ -29,6 +29,9 @@ Value numbers are static, but country-specific formatting is available
 
 link to the default English version: [https://andreybondarchuk.github.io/Project_1-14/](https://andreybondarchuk.github.io/Project_1-14/)
 
-link to the Ukrainian version:[https://andreybondarchuk.github.io/ua/Project_1-14/](https://andreybondarchuk.github.io/ua/Project_1-14/)
+link to the Ukrainian version:[https://andreybondarchuk.github.io/Project_1-14/#ua](https://andreybondarchuk.github.io/Project_1-14/#ua)
 
-link to the French version:[https://andreybondarchuk.github.io/fr/Project_1-14/](https://andreybondarchuk.github.io/fr/Project_1-14/)
+link to the French version:[https://andreybondarchuk.github.io/Project_1-14/#fr](https://andreybondarchuk.github.io/Project_1-14/#fr)
+
+## Commit notes
+I had to take a break after adding the last ```UC#14 Create documentation commit```, but then I found a bug in the solution proposed by chatGPT and spent an extra hour debugging
