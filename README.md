@@ -26,3 +26,9 @@ A drop-down menu with four options can be used to change the number and date for
 Added an input where you can enter a number for further changing its formats
 
 Value numbers are static, but country-specific formatting is available
+
+link to the default English version: [https://andreybondarchuk.github.io/Project_1-14/](https://andreybondarchuk.github.io/Project_1-14/)
+
+link to the Ukrainian version:[https://andreybondarchuk.github.io/ua/Project_1-14/](https://andreybondarchuk.github.io/ua/Project_1-14/)
+
+link to the French version:[https://andreybondarchuk.github.io/fr/Project_1-14/](https://andreybondarchuk.github.io/fr/Project_1-14/)
